@@ -77,34 +77,49 @@
             {
                 return day;
             }
+
+            if ((day >= 1 && day <= 28 && _month == 2) ||
+                (day >= 1 && day <= 30 && (_month == 4 || _month == 6 || _month == 9 || _month == 11)) ||
+                (day >= 1 && day <= 31 && (_month == 1 || _month == 3 || _month == 5 || _month == 7 || _month == 8 || _month == 10 || _month == 12)))
+            {
+
+            }
+
+            throw new ArgumentException("The day is not valid");
         }
 
-        // calculate the busiest year
+        // calculate the busiest year short code
         private bool IsLeapYear(int year)
         {
-            if (year % 4 == 0)
-            {
-                if (year % 100 == 0)
-                {
-                    if (_year % 400 == 0)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-                }
-                else
-                {
-                    return true;
-                }
-            }
-            else
-            {
-                return false;
-            }
+            return (year % 400 == 0 || year % 4 == 0 && year % 100 != 0);
         }
+
+        // calculate the busiest year large code
+        //private bool IsLeapYear(int year)
+        //{
+        //    if (year % 4 == 0)
+        //    {
+        //        if (year % 100 == 0)
+        //        {
+        //            if (_year % 400 == 0)
+        //            {
+        //                return true;
+        //            }
+        //            else
+        //            {
+        //                return false;
+        //            }
+        //        }
+        //        else
+        //        {
+        //            return true;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
 
 
         #endregion
