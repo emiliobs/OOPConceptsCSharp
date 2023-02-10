@@ -34,19 +34,19 @@
         public int Year
         {
             get => _year;
-            set => _year = value;
+            set => _year = ValidateYear(value);
         }
 
         public int Month
         {
             get => _month;
-            set => _month = value;
+            set => _month = ValidateMonth(value);
         }
 
         public int Day
         {
             get => _day;
-            set => _day = value;
+            set => _day = ValidateDay(value);
         }
         #endregion
 
@@ -82,7 +82,7 @@
                 (day >= 1 && day <= 30 && (_month == 4 || _month == 6 || _month == 9 || _month == 11)) ||
                 (day >= 1 && day <= 31 && (_month == 1 || _month == 3 || _month == 5 || _month == 7 || _month == 8 || _month == 10 || _month == 12)))
             {
-
+                return day;
             }
 
             throw new ArgumentException("The day is not valid");
