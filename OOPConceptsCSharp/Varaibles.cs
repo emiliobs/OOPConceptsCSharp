@@ -1,4 +1,5 @@
-﻿//For integers
+﻿
+//For integers
 int myInt = 55;
 
 //For decimal values:
@@ -13,13 +14,13 @@ string myString = "Emilio Barrera";
 //Boolean
 bool myBool = false;
 
-Console.WriteLine($"The Integer values is: {myInt, 20}");
+Console.WriteLine($"The Integer values is: {myInt,20}");
 
-Console.WriteLine($"The float values is..: {myFloat, 20:P2}");
+Console.WriteLine($"The float values is..: {myFloat,20:P2}");
 
-Console.WriteLine($"The double values is.: {myDouble, 20:N2}");
+Console.WriteLine($"The double values is.: {myDouble,20:N2}");
 
-Console.WriteLine($"The Decimal values...: {myDecimal, 20:C2}");
+Console.WriteLine($"The Decimal values...: {myDecimal,20:C2}");
 
 Console.WriteLine($"The string value is..: {myString}");
 
