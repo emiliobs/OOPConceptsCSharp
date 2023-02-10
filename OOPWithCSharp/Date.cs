@@ -51,21 +51,62 @@
         #endregion
 
         #region Methods
+        public override string ToString() => $"{Year,4:0000}/{Month,2:00}/{Day,2:00}";
+
         private int ValidateYear(int year)
         {
-            throw new NotImplementedException();
+            if (year < 0)
+            {
+                throw new ArgumentException("The year is invalid.");
+            }
+
+            return year;
         }
         private int ValidateMonth(int month)
         {
-            throw new NotImplementedException();
+            if (month < 1 || month > 12)
+            {
+                throw new ArgumentException("The month is no valid.");
+            }
+
+            return month;
         }
         private int ValidateDay(int day)
         {
-            throw new NotImplementedException();
+            if ((day == 29 && _month == 2 && IsLeapYear(_year)))
+            {
+                return day;
+            }
+        }
+
+        // calculate the busiest year
+        private bool IsLeapYear(int year)
+        {
+            if (year % 4 == 0)
+            {
+                if (year % 100 == 0)
+                {
+                    if (_year % 400 == 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                return false;
+            }
         }
 
 
-        public override string ToString() => $"{Year,4:0000}/{Month,2:00}/{Day,2:00}"; 
         #endregion
 
     }
