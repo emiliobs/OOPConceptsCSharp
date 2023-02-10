@@ -26,3 +26,5 @@ Console.WriteLine($"The string value is..: {myString}");
 Console.WriteLine($"The Boolean values is: {myBool}");
 
 Console.WriteLine($"The Boolean values is: {(myBool ? "Yes" : "No")}");
+
+Console.WriteLine($"The Boolean values is: {(myBool ? "Yes" : "No")}");
