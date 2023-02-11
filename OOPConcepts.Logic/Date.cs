@@ -1,4 +1,4 @@
-﻿namespace OOPWithCSharp
+﻿namespace OOPConcepts.Logic
 {
     public class Date
     {
