@@ -32,6 +32,23 @@ namespace OOPConcepts.UserInterface
             }
 
 
+            try
+            {
+                var year = Convert.ToInt32(txtYear.Text);
+                var month = Convert.ToInt32(txtMonth.Text);
+                var day = Convert.ToInt32(txtDay.Text);
+
+                var date = new DateTime(year, month, day);
+
+                MessageBox.Show($"Congratulations the Date: {date} is Valid.", "Confirm");
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show($"Something wrong was occurred: {ex.Message}", "Error");
+            }
+
         }
     }
 }
