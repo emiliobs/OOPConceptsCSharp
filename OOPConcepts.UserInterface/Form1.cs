@@ -1,3 +1,5 @@
+using OOPConcepts.Logic;
+
 namespace OOPConcepts.UserInterface
 {
     public partial class frmDate : Form
@@ -38,7 +40,7 @@ namespace OOPConcepts.UserInterface
                 var month = Convert.ToInt32(txtMonth.Text);
                 var day = Convert.ToInt32(txtDay.Text);
 
-                var date = new DateTime(year, month, day);
+                var date = new Date(year, month, day);
 
                 MessageBox.Show($"Congratulations the Date: {date} is Valid.", "Confirm");
 
