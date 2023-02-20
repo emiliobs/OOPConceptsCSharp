@@ -10,3 +10,6 @@ OOP Concepts CSharp and More
 <img width="1240" alt="da11" src="https://user-images.githubusercontent.com/3122465/218258120-e77c247b-15fb-447b-aefd-957e1457bddb.png">
 
 
+## abstract class Employee
+
+<img width="928" alt="ca" src="https://user-images.githubusercontent.com/3122465/220126691-04e8deeb-0b4c-4c89-bfff-70630af8c62b.png">
