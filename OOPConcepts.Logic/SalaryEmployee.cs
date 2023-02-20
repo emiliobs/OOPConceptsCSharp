@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Schema;
 
-namespace OOPWithCSharp
+namespace OOPConcepts.Logic
 {
     public class SalaryEmployee: Employee
     {
@@ -26,15 +26,15 @@ namespace OOPWithCSharp
         public override string ToString()
         {
             return $"        {base.ToString()}\n\t"             + 
-                   $"Salary..............:{Salary}\n\t" +
-                   $"Value to Pay........:{GetValueToPay()}";
+                   $"Salary..............: {Salary}\n\t" +
+                   $"Value to Pay........: {GetValueToPay():C2}";
         }
 
         private decimal ValidateSalary(decimal value)
         {
             if (value < 2068)
             {
-                throw new ArgumentException("The salry is less than minimum.");
+                throw new ArgumentException("The salary is less than minimum.");
             }
 
             return value;

@@ -1,7 +1,7 @@
 ﻿//using OOPWithCSharp;
 
 using OOPConcepts.Logic;
-using OOPWithCSharp;
+using System.ComponentModel.DataAnnotations;
 
 try
 {
@@ -16,7 +16,7 @@ try
 
     var employee1 = new SalaryEmployee 
     {
-      Id = 55555,
+      Id        = 55555,
       FirstName = "Emilio",
       LastName  = "Barrera",
       BortDate  = new Date(1975,05,05),
@@ -25,7 +25,23 @@ try
       Salary    =  5000, 
     };
 
+    var employee2 = new  HouryEmployee
+    {
+        Id = 11111             ,            
+        FirstName    = "Blanca",
+        LastName     = "Linda",
+        BortDate     = new Date(2024, 02,02),
+        HireDate     = new Date(2025, 03,03),
+        IsActive     = true,
+        WorkingHours = 160.5f,
+        HourValue    = 13.60m,
+        
+    };
+
+    Console.WriteLine("Employee 1: ");
     Console.WriteLine(employee1);
+    Console.WriteLine("Employee 2: ");
+    Console.WriteLine(employee2);
 }
 catch (Exception ex)
 {

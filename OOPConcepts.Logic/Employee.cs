@@ -25,7 +25,8 @@ namespace OOPConcepts.Logic
 
         public override string ToString()
         {
-            return $"{Id}\n\t{FullName}\n\t" +
+            return $"Id Code.............: {Id}\n\t"       +
+                   $"Full Name...........: {FullName}\n\t" +
                    $"Hired...............: {BortDate}";
         }
 
