@@ -13,3 +13,7 @@ OOP Concepts CSharp and More
 ## abstract class Employee
 
 <img width="928" alt="ca" src="https://user-images.githubusercontent.com/3122465/220126691-04e8deeb-0b4c-4c89-bfff-70630af8c62b.png">
+
+## Class HourlyEmployee
+
+<img width="929" alt="ab2" src="https://user-images.githubusercontent.com/3122465/220196261-88ab8276-63e9-4936-8b2e-0809f57ebfed.png">
