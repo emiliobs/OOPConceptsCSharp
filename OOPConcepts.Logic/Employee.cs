@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OOPConcepts.Logic
 {
-    public class Employee
+    public abstract class Employee
     {
         public int Id { get; set; }
 
@@ -15,7 +15,7 @@ namespace OOPConcepts.Logic
 
         public string? LastName { get; set; } 
 
-        public Date? BortName { get; set; }
+        public Date? BortDate { get; set; }
 
         public Date? HireDate { get; set; }
 
@@ -25,8 +25,10 @@ namespace OOPConcepts.Logic
 
         public override string ToString()
         {
-            return $"{Id}\t{FullName}\n\t" +
-                   $"Hired...............: {BortName}";
+            return $"{Id}\n\t{FullName}\n\t" +
+                   $"Hired...............: {BortDate}";
         }
+
+        public abstract decimal GetValueToPay();
     }
 }
