@@ -38,10 +38,26 @@ try
         
     };
 
+    var employee3 = new CommisionEmployee
+    {
+        Id = 11111,
+        FirstName = "Jasmin",
+        LastName = "Marulanda",
+        BortDate = new Date(1996, 02, 02),
+        HireDate = new Date(2021, 03, 03),
+        IsActive = true,
+        CommissionPercentaje = 0.05f,
+        Sales = 300000000,
+
+    };
+
     Console.WriteLine("Employee 1: ");
-    Console.WriteLine(employee1);
+    Console.WriteLine(employee1);      
     Console.WriteLine("Employee 2: ");
     Console.WriteLine(employee2);
+    Console.WriteLine();
+    Console.WriteLine("Employee 3: ");
+    Console.WriteLine(employee3);
 }
 catch (Exception ex)
 {

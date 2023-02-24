@@ -35,9 +35,9 @@ namespace OOPConcepts.Logic
         public override string ToString()
         {
             return $"        {base.ToString()}\n\t" +
-                   $"Workin Hours........: {WorkingHours}\n\t" +
-                   $"Hour Value..........: {HourValue:C2}\n\t"     +
-                   $"Value to Pay........: {GetValueToPay():c2}";
+                   $"Workin Hours........: {WorkingHours,20:N2}\n\t" +
+                   $"Hour Value..........: {HourValue, 20:C2}\n\t"     +
+                   $"Value to Pay........: {GetValueToPay(), 20:c2}";
         }
 
         private float ValidateWorkingHours(float value)

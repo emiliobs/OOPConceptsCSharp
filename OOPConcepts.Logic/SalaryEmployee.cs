@@ -25,9 +25,9 @@ namespace OOPConcepts.Logic
 
         public override string ToString()
         {
-            return $"        {base.ToString()}\n\t"             + 
-                   $"Salary..............: {Salary}\n\t" +
-                   $"Value to Pay........: {GetValueToPay():C2}";
+            return $"        {base.ToString()}\n\t"      + 
+                   $"Salary..............: {Salary, 20:C2}\n\t" +
+                   $"Value to Pay........: {GetValueToPay(),20:C2}";
         }
 
         private decimal ValidateSalary(decimal value)
