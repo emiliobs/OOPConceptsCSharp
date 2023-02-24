@@ -17,3 +17,6 @@ OOP Concepts CSharp and More
 ## Class HourlyEmployee
 
 <img width="929" alt="ab2" src="https://user-images.githubusercontent.com/3122465/220196261-88ab8276-63e9-4936-8b2e-0809f57ebfed.png">
+
+## Base Commission Employee
+<img width="968" alt="app1" src="https://user-images.githubusercontent.com/3122465/221250000-d2b6496e-4247-4733-8a6a-24af3fe135b3.png">
