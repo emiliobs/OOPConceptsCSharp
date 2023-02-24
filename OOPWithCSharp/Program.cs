@@ -40,7 +40,7 @@ try
 
     var employee3 = new CommisionEmployee
     {
-        Id = 11111,
+        Id = 22222,
         FirstName = "Jasmin",
         LastName = "Marulanda",
         BortDate = new Date(1996, 02, 02),
@@ -51,13 +51,48 @@ try
 
     };
 
-    Console.WriteLine("Employee 1: ");
-    Console.WriteLine(employee1);      
-    Console.WriteLine("Employee 2: ");
-    Console.WriteLine(employee2);
-    Console.WriteLine();
-    Console.WriteLine("Employee 3: ");
-    Console.WriteLine(employee3);
+    var employee4 = new BaseCommissionEmployee 
+    { 
+        Id = 55555,
+        FirstName = "Clara Jimenes",
+        LastName = "Linares",
+        BortDate = new Date(1978, 08, 08),
+        HireDate = new Date(2021, 05, 05),
+        IsActive = true,
+        CommissionPercentaje = 0.05f,
+        Sales = 5500000,
+        Salary = 620000,
+    };
+
+    //Console.WriteLine("Employee 1: ");
+    //Console.WriteLine(employee1);      
+    //Console.WriteLine("Employee 2: ");
+    //Console.WriteLine(employee2);
+    //Console.WriteLine("Employee 3: ");
+    //Console.WriteLine(employee3);
+    //Console.WriteLine("Employee 4  ");
+    //Console.WriteLine(employee4);
+
+    decimal payRoll = 0;
+    var contEmployee = 1;
+    Employee[] employees = new Employee[]
+    {
+        employee1, 
+        employee2, 
+        employee3, 
+        employee4,
+    };  
+
+    foreach ( Employee employee in employees )
+    {
+        Console.WriteLine($"Employee {contEmployee++}:\n {employee}\n\t");
+
+        payRoll += employee.GetValueToPay();
+    }
+
+    Console.WriteLine($"                             ====================");
+    Console.WriteLine($"Pay Roll                       {payRoll, 20:C2}");
+
 }
 catch (Exception ex)
 {

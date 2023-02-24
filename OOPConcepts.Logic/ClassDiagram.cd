@@ -8,24 +8,31 @@
     </TypeIdentifier>
   </Class>
   <Class Name="OOPConcepts.Logic.Employee">
-    <Position X="3.5" Y="2" Width="1.5" />
+    <Position X="3.25" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAEAAAAAAAIAEFAAAAAAAACAAAAAIAAAAAAAAAAg=</HashCode>
       <FileName>Employee.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="OOPConcepts.Logic.HouryEmployee">
-    <Position X="6.25" Y="1.75" Width="1.5" />
+    <Position X="5.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIAAAAAAAAQAAAAEAAwAAAAAAAABAAAIAAAAAAAAAAE=</HashCode>
       <FileName>HouryEmployee.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="OOPConcepts.Logic.SalaryEmployee">
-    <Position X="6.25" Y="5.5" Width="1.5" />
+    <Position X="3.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ACAAACAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAQAAAA=</HashCode>
       <FileName>SalaryEmployee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOPConcepts.Logic.CommisionEmployee">
+    <Position X="5.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAQAAAAAAAAAEAAAAFAAEAAAAAAAIAAgAAAAAAAA=</HashCode>
+      <FileName>CommisionEmployee.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
