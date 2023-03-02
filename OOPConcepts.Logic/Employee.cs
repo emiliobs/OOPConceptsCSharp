@@ -1,19 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OOPConcepts.Logic
+﻿namespace OOPConcepts.Logic
 {
-    public abstract class Employee
+    public abstract class Employee : IPay
     {
         public int Id { get; set; }
 
-        public string? FirstName { get; set; } 
+        public string? FirstName { get; set; }
 
-        public string? LastName { get; set; } 
+        public string? LastName { get; set; }
 
         public Date? BortDate { get; set; }
 
@@ -25,7 +18,7 @@ namespace OOPConcepts.Logic
 
         public override string ToString()
         {
-            return $"Id Code.............: {Id}\n\t"       +
+            return $"Id Code.............: {Id}\n\t" +
                    $"Full Name...........: {FullName}\n\t" +
                    $"Hired...............: {BortDate}";
         }

@@ -1,7 +1,6 @@
 ﻿//using OOPWithCSharp;
 
 using OOPConcepts.Logic;
-using System.ComponentModel.DataAnnotations;
 
 try
 {
@@ -14,28 +13,28 @@ try
     //        IsActive = true,
     //};
 
-    var employee1 = new SalaryEmployee 
+    var employee1 = new SalaryEmployee
     {
-      Id        = 55555,
-      FirstName = "Emilio",
-      LastName  = "Barrera",
-      BortDate  = new Date(1975,05,05),
-      HireDate  = new Date(2023,05, 05),
-      IsActive  = true,  
-      Salary    =  5000, 
+        Id = 55555,
+        FirstName = "Emilio",
+        LastName = "Barrera",
+        BortDate = new Date(1975, 05, 05),
+        HireDate = new Date(2023, 05, 05),
+        IsActive = true,
+        Salary = 5000,
     };
 
-    var employee2 = new  HouryEmployee
+    var employee2 = new HouryEmployee
     {
-        Id = 11111             ,            
-        FirstName    = "Blanca",
-        LastName     = "Linda",
-        BortDate     = new Date(2024, 02,02),
-        HireDate     = new Date(2025, 03,03),
-        IsActive     = true,
+        Id = 11111,
+        FirstName = "Blanca",
+        LastName = "Linda",
+        BortDate = new Date(2024, 02, 02),
+        HireDate = new Date(2025, 03, 03),
+        IsActive = true,
         WorkingHours = 160.5f,
-        HourValue    = 13.60m,
-        
+        HourValue = 13.60m,
+
     };
 
     var employee3 = new CommisionEmployee
@@ -51,8 +50,8 @@ try
 
     };
 
-    var employee4 = new BaseCommissionEmployee 
-    { 
+    var employee4 = new BaseCommissionEmployee
+    {
         Id = 55555,
         FirstName = "Clara Jimenes",
         LastName = "Linares",
@@ -75,23 +74,74 @@ try
 
     decimal payRoll = 0;
     var contEmployee = 1;
+
     Employee[] employees = new Employee[]
     {
-        employee1, 
-        employee2, 
-        employee3, 
+        employee1,
+        employee2,
+        employee3,
         employee4,
-    };  
+    };
 
-    foreach ( Employee employee in employees )
+
+
+    foreach (Employee employee in employees)
     {
+        Console.WriteLine("=========  EMPLOYEES ==========");
+        Console.WriteLine();
         Console.WriteLine($"Employee {contEmployee++}:\n {employee}\n\t");
-
         payRoll += employee.GetValueToPay();
     }
 
-    Console.WriteLine($"                             ====================");
-    Console.WriteLine($"Pay Roll                       {payRoll, 20:C2}");
+    Console.WriteLine($"                               ===================");
+    Console.WriteLine($"Total PayRoll                 :{payRoll,20:C2}");
+
+    Console.WriteLine();
+
+
+    var invoice = new Invoice
+    {
+        Id = 12345,
+        Description = "Papel",
+        Quantity = 85,
+        Price = 120000,
+    };
+
+    var invoice1 = new Invoice
+    {
+        Id = 12346,
+        Description = "iPad",
+        Quantity = 3,
+        Price = 6800000,
+    };
+
+    var invoice2 = new Invoice
+    {
+        Id = 12347,
+        Description = "Mantenimiento a la fotocopiadora",
+        Quantity = 84,
+        Price = 685000,
+    };
+
+    Console.WriteLine("=========  ENVOICES ==========");
+    Console.WriteLine();
+
+    decimal totalInvoices = 0;
+    Invoice[] invoices = new Invoice[] { invoice, invoice1, invoice2 };
+    foreach (var invoiceArray in invoices)
+    {
+        Console.WriteLine(invoiceArray);
+        totalInvoices += invoiceArray.GetValueToPay();
+        Console.WriteLine();
+    }
+
+
+    Console.WriteLine($"                               ===================");
+    Console.WriteLine($"Total Invoices                :{totalInvoices,20:C2}");
+
+    Console.WriteLine($"                               ===================");
+    Console.WriteLine($"                               ===================");
+    Console.WriteLine($"General Total                 :{payRoll + totalInvoices,20:C2}");
 
 }
 catch (Exception ex)
