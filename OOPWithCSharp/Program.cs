@@ -63,6 +63,19 @@ try
         Salary = 620000,
     };
 
+    var employee5 = new BaseCommissionEmployee
+    {
+        Id = 6766767,
+        FirstName = "BLanca",
+        LastName = "BArrera",
+        BortDate = new Date(1978, 08, 08),
+        HireDate = new Date(2021, 05, 05),
+        IsActive = true,
+        CommissionPercentaje = 0.05f,
+        Sales = 5500000,
+        Salary = 620000,
+    };
+
     //Console.WriteLine("Employee 1: ");
     //Console.WriteLine(employee1);      
     //Console.WriteLine("Employee 2: ");
@@ -81,6 +94,7 @@ try
         employee2,
         employee3,
         employee4,
+        employee5,
     };
 
 
